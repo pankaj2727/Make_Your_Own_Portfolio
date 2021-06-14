@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<HTML lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sign up</title>
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
+    <script>
+        var name=document.Loginform.name.value;
+              var p1=document.Loginform.password.value;
+              var p2=document.Loginform.recheckpassword.value;
+             
+              function validate(){
+                 
+                 if(name=="" || name==null){
+                    alert("Enter Name");
+                     return false;
+                 }
+                 else if(p1.length<6){
+                    alert("Password must be at least 6 characters long.");  
+                    return false;  
+                 }
+                 else if(p1!=p2){
+                    alert("Password Not Match");
+                     return false;
+                 }
+                
+            }
+
+            function valstrength(){
+                var msg;
+                if(document.Loginform.password.value.length<6)
+                msg= String.fromCodePoint(128078);
+                else
+                msg= String.fromCodePoint(128170);
+
+                document.getElementById('mylocation').innerText=msg;
+            }
+
+
+         </script>
+</head>
+
+<body style="background-color:black">
+    <div class="loginbutton">
+        <a href="Login.html" alt="loginbutton"><button class="Login">Log in</button></a>
+    </div>
+    <div class="form">
+        <form action="" method="POST" name="Loginform" onsubmit="return validate()">
+            <input class="Name" type="text" placeholder="Enter name" name="name">
+            <input class="email" type="email" placeholder="Enter email" name="emial">
+            <input class="password" type="password" placeholder="Enter password" name="password" onkeyup="valstrength()"><span id="mylocation"></span>
+            <input class="recheckpassword" type="password" placeholder="Enter again password" name="recheckpassword">
+            <input class="signup" type="submit" value="Sign up">
+        </form>
+    </div>
+</body>
+
+</HTML>

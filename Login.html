@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<HTML lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script>
+        function validate(){
+            var email=document.Loginform.email.value;
+            var password=document.Loginform.password.value;
+
+            if(email=="" || eamil==null || password=="" || password==null ){
+            alert("Enter Required Details");
+            return false;
+            }
+
+        }
+
+        </script>
+</head>
+
+<body style="background-color:black">
+    <div class="Homebutton">
+        <a href="index.html" alt="Homebutton"><button class="Home">Home</button></a>
+    </div>
+    <div class="form">
+        <form action="" method="POST" name="Loginform" onsubmit=" return validate()">
+            <input class="email" type="email" placeholder="Enter email" name="emial"><br>
+            <input class="password" type="password" placeholder="Enter password" name="password"><br>
+            <input class="submit" type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</HTML>
