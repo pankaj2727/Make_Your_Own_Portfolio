@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Your Portfolio </title>
+        <link rel="stylesheet" href="Make-portfolio.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+      
+
+
+        
+    </head>
+    <body style= "background-color: #242F3F" >
+        
+      
+        <div class="block1" id="block1" >
+                <nav>
+                    <h2>Portfolio</h2>
+
+                       <ul>
+                         <li><a href= "#block1">HOME</a></li>
+                         <li><a href= "#block3">PROJECT</a></li>
+                         <li><a href= "#skill-section">SKILLS</a></li>
+                         <li><a href= "#btnforabout">ABOUT ME</a></li>
+                         <li><a href= "#btnforcontact">CONTACT</a></li>
+                        </ul>
+                </nav>
+
+                <! -- FORM TO FILL USER NAME AND HIS DESIGNATION -->
+                
+                <div id="id01" class="introform">
+                   <span onclick="hide1()" class="close1" title="Close Modal">×</span>  
+                    <form  class="introformcontent" >
+                        <label>Enter Name : </label>
+                        <input type="text"  id="nameInput" ><br>
+                        <label>Enter designation : </label>
+                        <input type="text" id="designationInput" >
+                    </form>
+                    <button onclick= "hide1(); showName();">Submit</button>
+                </div>
+               
+                <button  id="btnforname" class="btnforname" onclick= "show2(); hide10()" >Add name</button>
+
+                 <! -- USER NAME AND HIS DESIGNATION -->
+                 <div class="Personame">
+                  <div id ="name">  </div>
+                  <div id ="designation"></div>
+                </div>
+                
+
+                <! -- USER PIC -->
+                <div class="Personpic">
+                <button class="pic" type="image" onclick="takeimage()"><h1>Add Image +</h1></button>
+                </div>
+        </div>
+
+       
+        <div class="block2">
+            <button  id="btnforabout" class="btnforabout" onclick= "show3(); hide11()" >Add About you</button>
+
+            <h2 >ABOUT ME</h2>
+
+            <! -- ABOUT USER FORM -->
+            <div id="id02" class="aboutForm">
+                <span onclick="hide2()" class="close2" title="Close2 Modal">×</span>  
+                 <form  class="aboutFormContent" >
+                     <textarea  id="aboutuser" placeholder="Write Something About You"></textarea>
+                 </form>
+                 <button onclick= "hide2(); showAbout()">Submit</button>
+              </div>
+
+
+
+            <! -- ABOUT USER -->
+           <div class="aboutUser">
+             <div id="userAbout"></div>
+           </div>
+
+           
+           <! -- USER 2 PIC -->
+           <div class="user2Pic">
+             
+           </div>
+        
+        </div>
+
+       
+       
+        <div class="block3" id="block3">
+            <h1>My Projects</h1>
+            <h2>Here are some of my Projects</h2>
+            <div id="btn">
+             <span onclick="hide3()" ">×</span>  
+            <button id="btn" onclick="show1();  hideProjectBtton(); ">Add project</button>
+            </div>
+           
+            <div  id="id03" class="projectForm">
+                <span onclick="hide9()"  class="projectFormX">×</span>  
+                <h2>Submit Details</h2>
+        
+        
+                        <div class="form1">
+                            <p>
+                              <label>Enter Project Name: </label>
+                              <input id="userProjectName" type="text" />
+                            </p>
+          
+                            <p>
+                              <label>Enter Skills gained: </label>
+                              <input id="userskillgained" type="text" />
+                            </p>
+        
+                            <p>
+                             
+                             <textarea  id="description" placeholder="Write about project"  rows="8" cols="40"></textarea>
+                            </p>
+
+                            <p>
+                                <label>Enter Project link: </label>
+                                <input id="userprojectlink" type="text" />
+                            </p>
+
+                            <p>
+                                <input type="submit" onclick="hide9();  projectInfo()" value="Submit" />
+                            </p>
+        
+                        </div>
+            </div>  
+
+              
+           
+            <div class="test">
+                <div class="subtest" id="p1" >
+                    <h2 id="p1Heading"></h2>
+                    <h3 id="p1Skills"></h3>
+                    <p  id="p1about"> </p>
+                    <a  id="p1link"></a>
+                </div>
+                <div class="subtest" id="p2" >
+                    <h2 id="p2Heading"></h2>
+                    <h3 id="p2Skills"></h3>
+                    <p  id="p2about"> </p>
+                    <a  id="p2link"  ></a>
+                </div>
+                <div class="subtest" id="p3">
+                    <h2 id="p3Heading"></h2>
+                    <h3 id="p3Skills"></h3>
+                    <p  id="p3about"> </p>
+                    <a  id="p3link"></a>
+                </div>
+                <span class="prev" id="prev" onclick=" pre() ">&#10094;</span>
+                <span class="next" id="next" onclick=" next()">&#10095;</span>
+            </div>
+            
+
+        </div>
+
+
+
+        <div class = "skill-section" id="skill-section">
+            <h1 >My Skills</h1>
+            <h3 >Below are the lists of my skills.</h3>
+            
+         
+            
+                    <div class = "skill1 domainSkills">
+                      <h2 class="skillHeading">Domain Skills</h2>
+                      <div id="domainSkills"></div>
+                   
+                         <div id="domainSkillBtn" >
+                        <span onclick="hide4()">×</span>  
+                        <button onclick="addSkillColumn1()">+</button>
+                       </div>
+                   
+                    </div>
+
+                    <div class = "skill2 technicalSkills">
+                    <h2 class="skillHeading">Technical Skills</h2>  
+                    <div id="technicalSkills"></div>
+                        <div id="technicalSkillBtn" >
+                            <span onclick="hide5()" ">×</span>  
+                            <button  onclick="addSkillColumn2()">+</button>
+                        </div>
+                    </div>
+
+                    <div class = "skill3 softSkills">
+                    <h2 class="skillHeading">Soft Skills</h2>  
+                    <div id="softSkills"></div>
+                        <div id="softSkillsBtn" >
+                            <span onclick="hide6()" ">×</span>  
+                            <button onclick="addSkillColumn3()">+</button>
+                        </div>
+                    </div>
+
+                    <div class = "skill4 languages">
+                    <h2 class="skillHeading">Languages</h2>   
+                    <div id="Languages"></div>
+                        <div id="LanguageBtn">
+                            <span onclick="hide7()" ">×</span>  
+                            <button  onclick="addSkillColumn4()">+</button>
+                        </div>
+                    </div>
+                
+            
+
+
+
+
+        </div>
+
+
+         <div class="block5">
+            
+            <div  id="id05" class="contactFormDiv">
+                <span onclick="hide8()"  class="contactFormX">×</span>  
+                <h2>Submit Details</h2>
+               
+                        <div class="form">
+                                <p>
+                                    <label>Phone: </label>
+                                    <input id="userPhone" type="text" />
+                                </p>
+
+                                <p>
+                                        <label>Email: </label>
+                                        <input id="userEmail" type="text" />
+                                </p>
+                               
+                                <p>
+                                        <label>GitHub id : </label>
+                                        <input id="userGit" type="text" />
+                                </p>
+
+                                <p>
+                                    <label>Address: </label>
+                                    <input  id="userAddress" type="text" />
+                                </p>
+                                
+                                <p>
+                                        <input type="submit" onclick="hide8(); showContact() "value="Submit" />
+                                </p>
+                        </div>
+            </div>
+           
+            <div class="keepTouch">
+                <button  id="btnforcontact" class="btnforcontact" onclick= "show4(); hide12()" >Add contact</button>
+
+                <h1> Get In Touch With Me</h1>
+
+                    
+                    <div class="phoneNo">
+                        <i class="fa fa-phone fa-3x" aria-hidden="true"></i>
+                        <div class="c1" id="phone"></div>
+
+                    </div>
+
+                    <div class="address">
+                        <i class="fa fa-home fa-3x" aria-hidden="true"></i>
+                        <div class="c1"id="address"></div>
+                    </div>
+ 
+                    <div  class="email">
+                        <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+                        <div class="c1" id="email"></div>
+                     </div>
+             
+                     <div class="gitHub">
+                        <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+                        <div class="c1" id="github"></div>
+
+                    </div>
+
+
+
+            </div>
+        </div>
+
+        
+       
+
+     <script src="Make-portfolio.js"></script>
+    
+    </body>
+
+</html>
