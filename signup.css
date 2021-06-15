@@ -1,0 +1,70 @@
+body {
+    background-image: url("imgs/loginimage2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Login {
+    float: right;
+    margin-top: -8%;
+    border-radius: 20px;
+    border: 2px solid green;
+    padding: 14px 40px;
+}
+
+.Login:hover {
+    background-color: white;
+    border: 3px solid green;
+}
+
+
+.form {
+    margin-left: 40%;
+    margin-top: 8%;
+    height: 460px;
+    width: 300px;
+    border: 1px solid yellow;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.Name {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.email {
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.password {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.recheckpassword {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.signup {
+    text-align: center;
+    padding: 14px 50px;
+    margin-top: 30px;
+    border: 2px solid green;
+    border-radius: 15px;
+}
+
+.signup:hover {
+    background-color: white;
+    border: 3px solid green;
+}

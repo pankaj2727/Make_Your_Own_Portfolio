@@ -1,0 +1,60 @@
+ body {
+    background-image: url("imgs/loginimage2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+
+ .Home {
+    float: right;
+    margin-top: -12%;
+    border-radius: 20px;
+    border: 2px solid green;
+
+    padding: 14px 40px;
+ }
+
+ .Home:hover {
+    background-color: white;
+    border: 3px solid green;
+ }
+
+
+ .form {
+
+    margin-left: 40%;
+    margin-top: 12%;
+    height: 390px;
+    width: 300px;
+    border: 1px solid yellow;
+    border-radius: 20px;
+ }
+
+
+ .email {
+    padding: 20px;
+    margin-top: 55px;
+    margin-left: 25px;
+    border-radius: 15px;
+ }
+
+ .password {
+    padding: 20px;
+    margin-top: 55px;
+    margin-left: 25px;
+    border-radius: 15px;
+ }
+
+
+ .submit {
+    text-align: "center";
+    padding: 14px 50px;
+    margin-top: 55px;
+    margin-left: 72px;
+    border: 2px solid green;
+    border-radius: 15px;
+ }
+
+ .submit:hover {
+    background-color: white;
+    border: 3px solid green;
+ }
